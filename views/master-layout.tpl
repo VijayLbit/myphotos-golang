@@ -13,6 +13,16 @@
 <body>
     {{.Header}}
     <div class="container">
+        {{ if .flash.success}}
+        <div class="bg-success">
+            {{ .flash.success}}
+        </div>
+        {{ end }}
+        {{ if .flash.error}}
+        <div class="bg-warning">
+            {{ .flash.error}}
+        </div>
+        {{ end }}
         {{.LayoutContent}}
     </div>
     {{.Footer}}

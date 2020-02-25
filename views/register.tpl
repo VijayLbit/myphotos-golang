@@ -1,5 +1,5 @@
 <h3>Register</h3>
-<form action="" method="post">
+<form action="/register" method="post">
     {{ .xsrfdata }}
     <div class="form-group">
         <label for="reg_name">Name</label>
@@ -30,6 +30,3 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
-{{ .msg }}
-{{ .Errors }}
