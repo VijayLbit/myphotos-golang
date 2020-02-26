@@ -53,6 +53,7 @@ func (uc *UserController) setLayout(tplName string, addXsrf bool) {
 	if addXsrf == true {
 		uc.Data["xsrfdata"] = template.HTML(uc.XSRFFormHTML())
 	}
+	uc.Data["requestUri"] = uc.Ctx.Request.RequestURI
 }
 
 func (uc *UserController) Login() {

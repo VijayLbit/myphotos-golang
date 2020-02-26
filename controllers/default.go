@@ -23,4 +23,5 @@ func (c *MainController) Get() {
 	c.LayoutSections["Header"] = "header.tpl"
 	c.LayoutSections["Footer"] = "footer.tpl"
 	c.TplName = "index.tpl"
+	c.Data["requestUri"] = c.Ctx.Request.RequestURI
 }
